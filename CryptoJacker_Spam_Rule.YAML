@@ -1,0 +1,101 @@
+--- # -----------------------------------------------------------
+
+# NFT SHOPS & STORES
+
+    moderators_exempt: false
+    domain+body+title (includes): [app.ens.domains, async.art, audius.co, bakeryswap.org, foundation.app, larvalabs.com, marble.cards, market.decentraland.org, decentraland.org, marketplace.axieinfinity.com, axieinfinity.com, metagrail.co, mooncatrescue.com, nftshowroom.com, niftygateway.com, opensea.io, rarible.com, superrare.co, viv3.com, yellowheart.io, zora.co, stocktwits.com, Cryptoart, Crypto art, Crypto-art, Crypto_art, Cryptart, cryptographic token, fungible, NFT, NFTs, N F T, non-fungible token, nonfungible token, nonfungibletoken]
+    action: spam
+    action_reason: "user:{{author}} | NFT Check: [{{match}}]"
+    set_flair: "NFT by {{author}}"
+    set_locked: true
+    modmail_subject: "NFT Check - Keyword: [{{match}}]"
+    modmail: |
+        The Following **[{{kind}}]** by **[u/{{author}}]** in **[r/{{subreddit}}]** has been flagged as **NFT / CRYPTO-ART**
+
+        ----------
+
+        ^(title as Plain Text:)
+
+        `{{title}}`
+
+        ^({{kind}} as Plain Text:)
+
+        >`{{body}}`
+
+        ----------
+
+        ^(**Direct Link: {{permalink}}**)
+
+---
+
+# CryptoJackers & NFT Hype Titles
+
+    type: submission
+    moderators_exempt: true
+    title (includes-word, regex): ['(claim.*|free.*|nft.*|mint.*)+(nfts?|free|mint|live|token)']
+    author:
+        set_flair: ['Ban Me', 'nullASB'] 
+        overwrite_flair: true
+    action: filter
+    set_locked: true
+    set_flair: ["{{match}} - {{author}}"]
+    action_reason: "Please Ban User: {{author}}"
+    comment: |
+        **THIS IS SPAM**
+
+        **OP: u/{{author}}**
+
+---
+
+
+# CryptoJackers & NFT Hype Titles
+
+    type: submission
+    moderators_exempt: true
+    body+title (includes-word): ["SEA Token", "Balenciaga ", "Palm Angels", "Bored Ape", "Chromie Squiggles", "RTFKT"]
+    author:
+        set_flair: ['Ban Me', 'nullASB'] 
+        overwrite_flair: true
+    action: spam
+    set_locked: true
+    set_flair: ["{{match}} - {{author}}"]
+    action_reason: "Please Ban User: {{author}}"
+    comment: |
+        **THIS IS SPAM**
+
+        **OP: u/{{author}}**
+
+---
+
+# CryptoJackers & NFT Hype  URL
+
+    type: submission
+    moderators_exempt: true
+    body+url (includes): ["porschenfts.live", "chromies.io", "palmangelsnfts.com", "balenciaganfts.org", "balenciaga.com", "noref.io", "rollsroyce-motorcarss.com", "rolls-roycemotorcars.com","rollsroycenfts.org", "porschenfts.live", "sea-airdrop.com", "donaldtrumpsnft.live", "porschemint.live", "porschenfts.org"]
+    author:
+        set_flair: ['Ban Me', 'nullASB'] 
+        overwrite_flair: true
+    action: filter
+    set_locked: true
+    set_flair: ["{{match}} - {{author}}"]
+    action_reason: "Please Ban User: {{author}}"
+    comment: |
+        **THIS IS SPAM**
+
+        **OP: u/{{author}}**
+
+---
+
+
+# CryptoJackers & NFT Hype Comments
+
+    type: comment
+    body (includes): ["Bro damn that nft is so awesome !", "yes yes I got the 578 mint", "So cool damn", "Damn lets go!", "Lol got red porsche taycan", "Surprisingly not a scam.. thank you though", "I'm surprised this is legit for once lol", "I am the 111th to claim my Token", "Crypto Gorilla actually tweeted about this one", "You can claim twice if you refresh the page!", "I was waiting on this for a long time too", "These look soo goood", "Thank you for not posting a scam for once.."]
+    author:
+        set_flair: ['Ban Me', 'nullASB'] 
+        overwrite_flair: true
+    action: spam
+    action_reason: "NFT Spam? Ban? {{author}}"
+    set_locked: true
+
+--- # -----------------------------------------------------------
