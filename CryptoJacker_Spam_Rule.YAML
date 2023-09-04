@@ -162,7 +162,7 @@
 
     type: submission
     moderators_exempt: true
-    title+body+domain+url (includes-word): ["balenciaga.com", "balenciaganfts.org", "chromies.io", "donaldtrumpsnft.live", "layerzr0.finance", "layerzro.finance", "noref.io", "palmangelsnfts.com", "porschenfts.live", "porschenfts.live", "porschenfts.org", "porschemint.live", "rolls-roycemotorcars.com", "rollsroyce-motorcarss.com", "rollsroycenfts.org", "sea-airdrop.com"]
+    title+body+domain+url (includes-word): ["balenciaga.com", "balenciaganfts.org", "chromies.io", "donaldtrumpsnft.live", "layerzr0.finance", "layerzro.finance", "layer0.technology", "noref.io", "palmangelsnfts.com", "porschenfts.live", "porschenfts.live", "porschenfts.org", "porschemint.live", "rolls-roycemotorcars.com", "rollsroyce-motorcarss.com", "rollsroycenfts.org", "sea-airdrop.com"]
     action: spam
     set_locked: true
     set_flair: ["{{match}} - {{author}}"]
