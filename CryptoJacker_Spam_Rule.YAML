@@ -1,8 +1,67 @@
+# SEPTEMBER 03, 2023 UPDATE
+
+## RETIRED FLAGS: ["Crypto art", "Crypto-art", "Crypto_art", "Cryptoart", "Cryptart", "non-fungible token", "nonfungible token", "nonfungibletoken"]
+## ADD IN IF STILL AN ISSUE FOR YOUR COMMUNITY!
+
+############ REMOVED - AUTO-BAHN #############
+### 
+###    author:
+###        set_flair: ['Ban Me', 'nullASB'] 
+###        overwrite_flair: true
+###
+##############################################
+
+############ COPY BELOW THIS LINE ############
+
+--- # -----------------------------------------------------------
+ 
+# New CryptoJacker & NFT Hype Submissons SEPT 2023
+
+    type: submission
+    moderators_exempt: true
+    title+body (includes-word, regex): ['((\$\d+)(\s+|\S+|\W+|\b|.+)|.+?)?(l0|airdrop|zro|tokens)((\s+|\S+|\W+|\b|.+)(\$\d+)|.+)?']
+    action: filter
+    set_locked: true
+    set_flair: ["{{match}} - {{author}}"]
+    action_reason: "{RULE#}: u/{{author}} | Crypto Check: [{{match}}]"
+    modmail_subject: "Crypto Check - Keyword: [{{match}}]"
+    modmail: |
+        The Following **[{{kind}}]** by **[u/{{author}}]** in **[r/{{subreddit}}]** has been flagged as **NFT / CRYPTO SPAM**
+
+        ----------
+        ----------
+        
+        ^({{kind}} title:)
+        
+        ----------
+        
+        {{title}}
+        
+        ----------
+        ----------
+        
+        ^(**{{kind}} as plain text:**)
+        
+        ----------
+        
+        {{body}}
+        
+        ----------
+        ----------
+        
+        ^(**WARNING: USER SHARED LINKS MAY BE MALICIOUS!**)
+        
+        ----------
+        
+        ^(**Direct Link: {{permalink}}**)
+        
+        ----------
+
 --- # -----------------------------------------------------------
 
 # NFT SHOPS & STORES
 
-    domain+body+title (includes): [app.ens.domains, async.art, audius.co, bakeryswap.org, foundation.app, larvalabs.com, marble.cards, market.decentraland.org, decentraland.org, marketplace.axieinfinity.com, axieinfinity.com, metagrail.co, mooncatrescue.com, nftshowroom.com, niftygateway.com, opensea.io, rarible.com, superrare.co, viv3.com, yellowheart.io, zora.co, stocktwits.com, Cryptoart, Crypto art, Crypto-art, Crypto_art, Cryptart, cryptographic token, fungible, NFT, NFTs, N F T, non-fungible token, nonfungible token, nonfungibletoken]
+    title+body+domain+url (includes-word): ["app.ens.domains", "async.art", "audius.co", "axieinfinity.com", "bakeryswap.org", "decentraland.org", "foundation.app", "larvalabs.com", "marble.cards", "marketplace.axieinfinity.com", "market.decentraland.org", "metagrail.co", "mooncatrescue.com", "nftshowroom.com", "niftygateway.com", "opensea.io", "rarible.com", "stocktwits.com", "superrare.co", "viv3.com", "yellowheart.io", "zora.co"]
     action: spam
     action_reason: "{RULE#}: u/{{author}} | NFT Check: [{{match}}]"
     set_flair: "NFT by {{author}}"
@@ -42,72 +101,145 @@
 
 --- # -----------------------------------------------------------
 
-
-# CryptoJackers & NFT Hype Titles
+# CryptoJackers & NFT Hype Titles | REGEX
 
     type: submission
     moderators_exempt: true
     title (includes-word, regex): ['(claim.*|free.*|nft.*|mint.*)+(nfts?|free|mint|live|token)']
-    author:
-        set_flair: ['Ban Me', 'nullASB'] 
-        overwrite_flair: true
     action: filter
     set_locked: true
     set_flair: ["{{match}} - {{author}}"]
-    action_reason: "{Rule#}: Please Ban u/{{author}}"
+    action_reason: "{RULE#}: u/{{author}} | Crypto Check: [{{match}}]"
+    modmail_subject: "Crypto Check - Keyword: [{{match}}]"
+    modmail: |
+        The Following **[{{kind}}]** by **[u/{{author}}]** in **[r/{{subreddit}}]** has been flagged as **NFT / CRYPTO-ART**
 
-## Optional comment to deter future spam, doesnt work because spammers dont care. Commented out & removed from below sections
-
-#    comment: |
-#        **THIS IS SPAM**
-
-#        **OP: u/{{author}}**
-
+        ----------
+        ----------
+        
+        ^({{kind}} title:)
+        
+        ----------
+        
+        {{title}}
+        
+        ----------
+        ----------
+        
+        ^(**{{kind}} as plain text:**)
+        
+        ----------
+        
+        {{body}}
+        
+        ----------
+        ----------
+        
+        ^(**WARNING: USER SHARED LINKS MAY BE MALICIOUS!**)
+        
+        ----------
+        
+        ^(**Direct Link: {{permalink}}**)
+        
+        ----------
 
 --- # -----------------------------------------------------------
 
-
-# CryptoJackers & NFT Hype Titles
+# CryptoJackers & NFT Hype Titles | PHRASES
 
     type: submission
     moderators_exempt: true
-    body+title (includes-word): ["SEA Token", "Balenciaga ", "Palm Angels", "Bored Ape", "Chromie Squiggles", "RTFKT"]
-    author:
-        set_flair: ['Ban Me', 'nullASB'] 
-        overwrite_flair: true
+    title+body (includes-word): ["Balenciaga", "Bored Ape", "Chromie Squiggles", "layerzro", "layerzr0", "Palm Angels", "RTFKT", "SEA Token"]
     action: spam
     set_locked: true
     set_flair: ["{{match}} - {{author}}"]
-    action_reason: "{Rule#}: Please Ban u/{{author}}"
+    action_reason: "{RULE#}: u/{{author}} | Crypto Check: [{{match}}]"
     
 --- # -----------------------------------------------------------
 
 
-# CryptoJackers & NFT Hype  URL
+# CryptoJackers & NFT Hype URLs
 
     type: submission
     moderators_exempt: true
-    body+url (includes): ["porschenfts.live", "chromies.io", "palmangelsnfts.com", "balenciaganfts.org", "balenciaga.com", "noref.io", "rollsroyce-motorcarss.com", "rolls-roycemotorcars.com","rollsroycenfts.org", "porschenfts.live", "sea-airdrop.com", "donaldtrumpsnft.live", "porschemint.live", "porschenfts.org"]
-    author:
-        set_flair: ['Ban Me', 'nullASB'] 
-        overwrite_flair: true
-    action: filter
+    title+body+domain+url (includes-word): ["balenciaga.com", "balenciaganfts.org", "chromies.io", "donaldtrumpsnft.live", "layerzr0.finance", "layerzro.finance", "noref.io", "palmangelsnfts.com", "porschenfts.live", "porschenfts.live", "porschenfts.org", "porschemint.live", "rolls-roycemotorcars.com", "rollsroyce-motorcarss.com", "rollsroycenfts.org", "sea-airdrop.com"]
+    action: spam
     set_locked: true
     set_flair: ["{{match}} - {{author}}"]
-    action_reason: "{Rule#}: Please Ban u/{{author}}"
+    action_reason: "{RULE#}: u/{{author}} | Crypto Check: [{{match}}]"
     
 --- # -----------------------------------------------------------
 
 
-# CryptoJackers & NFT Hype Comments
+# CryptoJackers & NFT Hype Comments | OLD
 
     type: comment
     body (includes): ["Bro damn that nft is so awesome !", "yes yes I got the 578 mint", "So cool damn", "Damn lets go!", "Lol got red porsche taycan", "Surprisingly not a scam.. thank you though", "I'm surprised this is legit for once lol", "I am the 111th to claim my Token", "Crypto Gorilla actually tweeted about this one", "You can claim twice if you refresh the page!", "I was waiting on this for a long time too", "These look soo goood", "Thank you for not posting a scam for once.."]
-    author:
-        set_flair: ['Ban Me', 'nullASB'] 
-        overwrite_flair: true
     action: spam
-    action_reason: "{RULE#}: NFT Spam? Ban? u/{{author}}"
+    action_reason: "{RULE#}: u/{{author}} | Crypto Check: [{{match}}]"
+    set_locked: true
+
+--- # -----------------------------------------------------------
+
+
+# CryptoJackers & NFT Hype Comments SEPT 2023 | NEW
+
+    type: comment
+    body (includes-word, regex): ['(?:Airdrop received and noted\. Time to do some research)',
+      '(?:Airdrop received\! A pleasant reminder that crypto can be full of surprises)',
+      '(?:Airdrops always feel like these little unexpected bonuses\. Love it)',
+      '(?:Airdrops are like little treasures. Always brings a smile to my face)',
+      '(?:Airdrops are like small blessings in the crypto world\. Loving this one)',
+      '(?:Airdrops can be make or break\. Expecting something big from )(.*?)(\s+|\S+\.+)',
+      '(?:Airdrops like these fuel my optimism about the future of crypto)',
+      '(?:Airdrops like these keep my excitement about the future of crypto alive)',
+      '(?:Airdrops like these make me excited about the future of crypto)',
+      '(?:Airdrops popping up like surprises in a virtual treasure hunt)(.*?)(?:, count me in)',
+      '(?:Airdrops remind me of the wild ride crypto can be)(.*?)(?:\s got my attention)',
+      '(?:Airdrops, whether big or small, keep the crypto journey interesting)',
+      '(?:Any thoughts on the project behind this airdrop\? Initial impression looks good)',
+      '(?:Anyone else wondering what[\x27]s behind this airdrop)',
+      '(?:Considering staking these airdrop tokens\. Thoughts on potential returns)',
+      '(?:Curious to see how this project develops after the spotlight of the airdrop)',
+      '(?:Excited to see where this project heads after the airdrop attention fades)',
+      '(?:Fingers crossed this airdrop brings some positive attention to the project)',
+      '(?:Got my slice of the airdrop pie too\. Feeling fortunate today)',
+      '(?:Got the airdrop notification\. Time to explore what )(.*?)(?: is all about)',
+      '(?:Got the airdrop too\. Anyone else feeling a bit luckier today)',
+      '(?:I appreciate the airdrop, but remember folks, always do your research)',
+      '(?:I still can[\x27]t figure out where this airdrop came from\. But hey, free crypto is welcome)',
+      '(?:I wonder what[\x27]s the story behind this airdrop\? Has anyone already looked into it)',
+      '(?:Investment requirements for the )(.*?)(?: airdrop got me curious\. Minimum (\d*) transactions)',
+      '(?:It[\x27]s about time )(.*?)(?: did an airdrop\. Let[\x27]s see what they[\x27]ve got in store)',
+      '(?:I[\x27]ve never said no to free stuff\. Thank you, airdrop)',
+      '(?:Just caught wind of the )(.*?)(?: airdrop news! Any details on how to participate)',
+      '(?:Just found the airdrop in my wallet\. Unexpected bonuses are the best)',
+      '(?:Let[\x27]s hope this airdrop brings good things to the project)',
+      '(?:Let[\x27]s hope this airdrop gives )(.*?)(?: a well-deserved boost)',
+      '(?:Noted the airdrop\. Now time to dig into the nitty-gritty details)',
+      '(?:Positive news like an airdrop could really boost )(.*?)(?:[\x27]s position)',
+      '(?:Quick look into the project seems promising\. What do you all think)',
+      '(?:Skepticism[\x27]s my middle name, but free crypto[\x27]s hard to pass up\. Still doing my research)',
+      '(?:Staking airdrop tokens could be a unique way to engage with the project)',
+      '(?:Staking these airdrop tokens could be interesting\. Any thoughts)',
+      '(?:Staking these airdrop tokens sounds like a potential way to earn more)',
+      '(?:Still wrapping my head around this airdrop\. Where did it come from)',
+      '(?:The initial glimpse into the project looks promising\. What[\x27]s the consensus here)',
+      '(?:The option to stake these airdrop tokens seems intriguing\. Any thoughts on that)',
+      '(?:The value of an airdrop lies beyond the immediate gain\. It[\x27]s about potential)',
+      '(?:This airdrop came out of nowhere\. Gotta love unexpected bonuses)',
+      '(?:This airdrop feels like a gift out of nowhere\. I[\x27]m definitely not complaining)',
+      '(?:This airdrop has definitely piqued my interest\. Looking forward to learning more)',
+      '(?:This airdrop has me intrigued\. Looking forward to seeing more)',
+      '(?:This airdrop is a little boost for my crypto enthusiasm\. Thanks)(.*?)(\s+|\S+\.+)',
+      '(?:To hold onto the airdrop tokens or to trade them\? Decisions, decisions)',
+      '(?:To trade or to HODL the airdrop tokens\? That[\x27]s the question)',
+      '(?:What[\x27]s your gut feeling about the potential impact of this airdrop)',
+      '(?:While I appreciate the airdrop, I[\x27]m keeping a bit of skepticism\. Caution is key)',
+      '(?:Woke up to )(.*?)(?: airdrop rumors\. Anyone verify this yet)',
+      '(?:Wonder if the )(.*?)(?: airdrop will make a significant impact)']
+    action: spam
+    action_reason: "{RULE#}: u/{{author}} | Crypto Check: [{{match}}]"
     set_locked: true
 
 --- # -----------------------------------------------------------
